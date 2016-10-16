@@ -18,9 +18,9 @@ var HTMLheaderRole = '<span>%data%</span><hr>';
 var HTMLcontactGeneric = '<li class="flex-item"><span class="orange-text">%contact%</span><span class="white-text">%data%</span></li>';
 var HTMLmobile = '<li class="flex-item"><span class="orange-text">mobile</span><span class="white-text">%data%</span></li>';
 var HTMLemail = '<li class="flex-item"><span class="orange-text">email</span><span class="white-text">%data%</span></li>';
-var HTMLtwitter = '<li class="flex-item"><span class="orange-text">twitter</span><span class="white-text">%data%</span></li>';
-var HTMLgithub = '<li class="flex-item"><span class="orange-text">github</span><span class="white-text">%data%</span></li>';
-var HTMLblog = '<li class="flex-item"><span class="orange-text">blog</span><span class="white-text">%data%</span></li>';
+var HTMLfacebook = '<li class="flex-item"><span class="orange-text"><a href="%data%" target="_blank">f</a></span></li>';
+var HTMLlinkedin = '<li class="flex-item"><span class="orange-text"><a href="%data%" target="_blank">ln</a></span></li>';
+var HTMLgithub = '<li class="flex-item"><span class="orange-text"><a href="%data%" target="_blank">git</a></span></li>';
 var HTMLlocation = '<li class="flex-item"><span class="orange-text">location</span><span class="white-text">%data%</span></li>';
 
 var HTMLbioPic = '<img src="%data%" class="biopic">';
@@ -133,9 +133,11 @@ function initializeMap() {
     // the locations array. Note that forEach is used for array iteration
     // as described in the Udacity FEND Style Guide:
     // https://udacity.github.io/frontend-nanodegree-styleguide/javascript.html#for-in-loop
-    education.schools.forEach(function(school){
-      locations.push(school.location);
-    });
+
+
+    for(var i = 0; i < education.schools.length; i++) {
+      locations.push(education.schools[i].city);
+    };
 
     // iterates through work locations and appends each location to
     // the locations array. Note that forEach is used for array iteration
