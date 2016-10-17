@@ -137,7 +137,7 @@ function initializeMap() {
 
 
     for(var i = 0; i < education.schools.length; i++) {
-      locations.push(education.schools[i].city);
+      locations.push(education.schools[i].location);
     };
 
     // iterates through work locations and appends each location to
