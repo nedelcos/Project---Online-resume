@@ -1,6 +1,5 @@
 var DATA = "%data%";
 
-
 var bio = {
   "name": "Daniel Nedelcu",
   "role": "Front End Developer",
@@ -14,7 +13,7 @@ var bio = {
   },
   "welcomeMessage": "I am Daniel & I love to build clean, responsive websites",
   "skills": ["awesomeness", "progeamming", "teaching", "JS"],
-  "bioPic": "images/me.png",
+  "bioPic": "images/me.jpg",
   "display": function() {
     var formattedName = HTMLheaderName.replace(DATA, bio.name);
     var formattedRole = HTMLheaderRole.replace(DATA, bio.role);
@@ -45,23 +44,29 @@ var bio = {
   }
 };
 
-bio.display();
-
 var work = {
   "jobs": [
     {
-      "employer": "Tegmark",
+      "employer": "Virtual X",
       "title": "Web Developer Intern",
       "location": "Bucharest",
       "dates": "June 2016 - Present",
-      "description": "I was assigned the task of building a responsive website for a new department, dedicated for VR prductions"
+      "description": "I was assigned the task of building a responsive website for a new department, dedicated for VR prductions. I also\
+      research & documentation on how the business works and made the content for the website. "
     },
     {
       "employer": "Tegmark",
       "title": "Sys Admin",
       "location": "Bucharest",
-      "dates": "September 2015 - Present",
-      "description": "I was in charge of administrating the company's websites, web applications and the VPS"
+      "dates": "November 2015 - Present",
+      "description": "I was in charge of administrating the company's websites, web applications and the VPS hosting."
+    },
+    {
+      "employer": "Metamorph Studio",
+      "title": "Web & Graphic designer",
+      "location": "Bucharest",
+      "dates": "May 2015 - November 2015",
+      "description": "I created 2 websites for the company & also created the layouts for the printed newspapers (in inDesign)."
     }
   ],
   "display": function() {
@@ -89,7 +94,7 @@ var projects = {
   "projects": [
     {
       "title": "Virtual eXperience",
-      "dates": 2016,
+      "dates": "2016",
       "description": "One-man-job project. The website is built in WordPress, using custom page templates.",
       "images": [
         "images/screen_virtualx.jpg",
@@ -98,7 +103,7 @@ var projects = {
     },
     {
       "title": "Rentador",
-      "dates": 2015,
+      "dates": "2015",
       "description": "Built in WordPress. The site uses custom page templates. Purpose: Rent a Car website",
       "images": [
         "images/screen_rentador.jpg",
@@ -107,7 +112,7 @@ var projects = {
     },
     {
       "title": "Panda Project",
-      "dates": 2014,
+      "dates": "2014",
       "description": "Built in Joomla. The website is for a Direct Marketing agency.",
       "images": [
         "images/screen_panda.jpg",
@@ -141,30 +146,32 @@ var education = {
   "schools": [
     {
       "name": "Hyperion University",
-      "city": "Bucharest",
+      "location": "Bucharest",
       "degree": "BA",
       "majors": "Journalism & Communication",
-      "dates": 2012
+      "dates": "2012",
+      "url": "http://www.jurnalism.hyperion.ro"
     },
     {
       "name": "Technical College Campulung",
-      "city": "Campulung",
+      "location": "Campulung",
       "degree": "College diploma",
       "majors": "Automatization systems",
-      "dates": 2009
+      "dates": "2009",
+      "url": "http://gstaro.muscel.ro"
     }
   ],
   "onlineCourses": [
     {
       "title": "Front End Developer Nanodegree",
       "school": "Udacity",
-      "dates": 2016,
+      "dates": "2016",
       "url": "https://profiles.udacity.com/u/danielnedelcu"
     },
     {
       "title": "Front End tehniques",
       "school": "CodeAcademy",
-      "dates": 2016,
+      "dates": "2016",
       "url": "https://www.codecademy.com/users/netWhiz20456/achievements"
     }
   ],
@@ -175,14 +182,31 @@ var education = {
         var formattedName = HTMLschoolName.replace(DATA, education.schools[i].name);
         var formattedDegree = HTMLschoolDegree.replace(DATA, education.schools[i].degree);
         var formattedDates = HTMLschoolDates.replace(DATA, education.schools[i].dates);
-        var formattedCity = HTMLschoolLocation.replace(DATA, education.schools[i].city);
+        var formattedCity = HTMLschoolLocation.replace(DATA, education.schools[i].location);
         var formattedMajors = HTMLschoolMajor.replace(DATA, education.schools[i].majors);
+        var formattedURL = HTMLschoolURL.replace("#", education.schools[i].url).replace(DATA, "website")
 
         $(".education-entry:last").append(formattedName);
         $(".education-entry:last").append(formattedDegree);
         $(".education-entry:last").append(formattedDates);
         $(".education-entry:last").append(formattedCity);
         $(".education-entry:last").append(formattedMajors);
+        $(".education-entry:last").append(formattedURL);
+      }
+    }
+    $("#online-education").append(HTMLonlineClasses);
+    if(education.onlineCourses.length > 0) {
+      for(var o = 0; o < education.onlineCourses.length; o++ ) {
+        var formattedTitle = HTMLonlineTitle.replace(DATA, education.onlineCourses[o].title);
+        var formattedSchool = HTMLonlineSchool.replace(DATA, education.onlineCourses[o].school);
+        var formattedDates = HTMLonlineDates.replace(DATA, education.onlineCourses[o].dates);
+        var formattedURL = HTMLonlineURL.replace("#", education.onlineCourses[o].url).replace(DATA, "See online profile")
+
+        $(".online-education-entry:last").append(formattedTitle);
+        $(".online-education-entry:last").append(formattedSchool);
+        $(".online-education-entry:last").append(formattedDates);
+        $(".online-education-entry:last").append(formattedURL);
+
       }
     }
   }
@@ -206,8 +230,13 @@ function locationizer() {
       return workLocations;
 }
 
-$("#mapDiv").append(googleMap);
+function map () {
+  $("#mapDiv").append(googleMap);
+}
 
+
+bio.display();
 work.display();
 projects.display();
 education.display();
+map();
