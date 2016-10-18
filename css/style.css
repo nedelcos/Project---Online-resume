@@ -11,7 +11,7 @@ h5,
 h6 {
   padding:0;
   margin:0;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .clear-fix {
@@ -130,9 +130,7 @@ a {
 }
 
 /* TODO: Replace with image later */
-#header {
-  background-color: #484848;
-}
+
 
 .flex-box {
   display: -webkit-flex;
@@ -158,19 +156,8 @@ ul {
   list-style-type: none;
 }
 
-.biopic {
-  float: left;
-  padding: 10px;
-  width: 200px;
-  display: none;
-}
-
 img {
   padding: 10px;
-}
-
-span {
-  padding: 5px;
 }
 
 #lets-connect {
@@ -227,4 +214,78 @@ span {
   border: 1px solid #ddd;
   padding: 0;
   margin: 10px 10px 0 0;
+}
+
+
+
+
+/* HEADER */
+
+#header {
+  background-color: #252525;
+  padding-top: 12px;
+}
+
+.contact-item {
+  color: #fff;
+  display: block !important;
+  font-size: 1.2em !important;
+  margin-bottom: 5px;
+}
+
+.contact-item:before {
+    margin-right: 10px;
+}
+
+.social-icon {
+  margin-right: 0.8em;
+  font-size: 1.5em !important;
+  color: #fff;
+  margin-top: 0;
+}
+
+.my-name {
+  color: #fff;
+  font-weight: 300;
+}
+
+.my-role {
+  color: #d7b35a;
+  font-weight: 700;
+  margin: 0;
+  padding: 10px 3px 0 0;
+}
+
+.biopic {
+  padding: 0;
+  width: 200px;
+  margin: 0 auto;
+  margin-top: -100px;
+  border: 7px solid #fff;
+}
+
+.bio-location {
+  font-size: 1.5em;
+}
+
+.intro-message {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 5em 0 5em 0;
+}
+
+.vert-line {
+  border-top: 30px solid #ccc;
+  width: 1px;
+  margin-bottom: 5em;
+}
+
+.my-skills {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin-bottom: 5em;
+}
+
+.skill-item {
+    padding: 0.3em;
 }

@@ -12,22 +12,22 @@ Cameron Pittman
 These are HTML strings. As part of the course, you'll be using JavaScript functions
 replace the %data% placeholder text you see in them.
 */
-var HTMLheaderName = '<h1 id="name">%data%</h1>';
-var HTMLheaderRole = '<span>%data%</span><hr>';
+var HTMLheaderName = '%data%';
+var HTMLheaderRole = '%data%';
 
 var HTMLcontactGeneric = '<li class="flex-item"><span class="orange-text">%contact%</span><span class="white-text">%data%</span></li>';
-var HTMLmobile = '<li class="flex-item"><span class="orange-text">mobile</span><span class="white-text">%data%</span></li>';
-var HTMLemail = '<li class="flex-item"><span class="orange-text">email</span><span class="white-text">%data%</span></li>';
-var HTMLfacebook = '<li class="flex-item"><span class="orange-text"><a href="%data%" target="_blank">f</a></span></li>';
-var HTMLlinkedin = '<li class="flex-item"><span class="orange-text"><a href="%data%" target="_blank">ln</a></span></li>';
-var HTMLgithub = '<li class="flex-item"><span class="orange-text"><a href="%data%" target="_blank">git</a></span></li>';
-var HTMLlocation = '<li class="flex-item"><span class="orange-text">location</span><span class="white-text">%data%</span></li>';
+var HTMLmobile = '<li class="contact-item">☎ %data%</li>';
+var HTMLemail = '<li class="contact-item">✉ %data%</li>';
+var HTMLfacebook = '<a class="fa fa-facebook social-icon" href="%data%" target="_blank"></a>';
+var HTMLlinkedin = '<a class="fa fa-linkedin social-icon" href="%data%" target="_blank"></a>';
+var HTMLgithub = '<a class="fa fa-github social-icon" href="%data%" target="_blank"></a>';
+var HTMLlocation = '%data%';
 
-var HTMLbioPic = '<img src="%data%" class="biopic">';
-var HTMLwelcomeMsg = '<span class="welcome-message">%data%</span>';
+var HTMLbioPic = '<img src="%data%" class="biopic img-responsive">';
+var HTMLwelcomeMsg = '%data%';
 
 var HTMLskillsStart = '<h3 id="skills-h3">Skills at a Glance:</h3><ul id="skills" class="flex-column"></ul>';
-var HTMLskills = '<li class="flex-item"><span class="white-text">%data%</span></li>';
+var HTMLskills = '<div class="flex-item skill-item">%data%</div>';
 
 var HTMLworkStart = '<div class="work-entry"></div>';
 var HTMLworkEmployer = '<a href="#">%data%';

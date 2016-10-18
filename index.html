@@ -1,17 +1,50 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta name="description" content="Daniel Nedelcu - Online resumee"/>
+  <meta name="author" content="Daniel Nedelcu">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta charset="utf-8">
   <title>Resume - Daniel Nedelcu</title>
-  <link href="css/style.css" rel="stylesheet">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,700" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" rel="stylesheet" crossorigin="anonymous">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.4/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/c54842ddb7.js"></script>
 </head>
 <body>
-  <div id="main">
-    <div id="header" class="center-content clear-fix">
-      <ul id="topContacts" class="flex-box"></ul>
-      <ul id="topSocial" class="flex-box"></ul>
+  <!-- HEADER -->
+  <div class="container-fluid">
+    <header id="header" class="row">
+      <div class="get-in-touch text-left col-xs-6">
+        <ul id="topContacts"></ul>
+        <span id="topSocial"></span>
+      </div>
+      <div class="name-cont text-right text-uppercase col-xs-6">
+        <h1 class="my-name text-bold"></h1>
+        <h4 class="my-role text-grey"></h4>
+      </div>
+    </header>
+    <div class="row bio-pic-container"></div>
+    <div class="bio-location text-center"></div>
+  </div>
+  <!-- INTRO -->
+  <div class="container">
+    <div class="row">
+      <p class="intro-message text-center"></p>
     </div>
+  </div>
+  <!-- SKILLS -->
+  <div class="container-fluid">
+    <div class="row">
+      <hr class="vert-line">
+      <div class="my-skills text-center col-xs-12"></div>
+      <hr class="vert-line">
+    </div>
+  </div>
+  <div class="container">
     <div style="clear: both;"></div>
     <div id="workExperience" class="gray">
       <h2>Work Experience</h2>

@@ -11,26 +11,27 @@ var bio = {
     "github": "https://github.com/nedelcos",
     "location": "Berlin"
   },
-  "welcomeMessage": "I am Daniel & I love to build clean, responsive websites",
-  "skills": ["awesomeness", "progeamming", "teaching", "JS"],
+  "welcomeMessage": "I am Daniel & I love to build neat, responsive websites. If you are a company looking for a new Front End Developer and your HQ is in Berlin, then I might just be the man for the job.",
+  "skills": ["HTML5", "CSS3", "Bootstrap", "Javascript", "jQuery", "CMS", "Photoshop", "inDesign", "SEO & SEM"],
   "bioPic": "images/me.jpg",
   "display": function() {
     var formattedName = HTMLheaderName.replace(DATA, bio.name);
     var formattedRole = HTMLheaderRole.replace(DATA, bio.role);
-      $("#header").prepend(formattedName + formattedRole);
+      $(".my-role").prepend(formattedRole);
+      $(".my-name").prepend(formattedName);
 
     var formattedPic = HTMLbioPic.replace(DATA, bio.bioPic);
     var formattedMessage = HTMLwelcomeMsg.replace(DATA, bio.welcomeMessage);
-      $("#header").append(formattedPic + formattedMessage);
-
     var formattedLocation = HTMLlocation.replace(DATA, bio.contacts.location);
-        $("#header").append(formattedLocation);
+      $(".bio-pic-container").append(formattedPic);
+      $(".bio-location").append(formattedLocation);
+      $(".intro-message").append(formattedMessage);
 
     if (bio.skills.length > 0) {
       $("#header").append(HTMLskillsStart);
       for(var i = 0; i < bio.skills.length; i++) {
         var formattedSkills = HTMLskills.replace(DATA, bio.skills[i]);
-          $("#header").append(formattedSkills);
+          $(".my-skills").append(formattedSkills);
       }
     };
 
@@ -39,7 +40,7 @@ var bio = {
     var formattedFacebook = HTMLfacebook.replace(DATA, bio.contacts.facebook);
     var formattedLinkedIn = HTMLlinkedin.replace(DATA, bio.contacts.linkedin);
     var formattedGitHub = HTMLgithub.replace(DATA, bio.contacts.github);
-      $("#topContacts, #footerContacts").append(formattedMobile + formattedEmail);
+      $("#topContacts, #footerContacts").append(formattedEmail + formattedMobile);
       $("#topSocial, #footerSocial").append(formattedFacebook + formattedLinkedIn + formattedGitHub);
   }
 };
