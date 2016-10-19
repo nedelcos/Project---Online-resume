@@ -28,7 +28,7 @@ var bio = {
       $(".intro-message").append(formattedMessage);
 
     if (bio.skills.length > 0) {
-      $("#header").append(HTMLskillsStart);
+      $(".my-skills").prepend(HTMLskillsStart);
       for(var i = 0; i < bio.skills.length; i++) {
         var formattedSkills = HTMLskills.replace(DATA, bio.skills[i]);
           $(".my-skills").append(formattedSkills);
@@ -81,11 +81,11 @@ var work = {
         var formattedLocation = HTMLworkLocation.replace(DATA, work.jobs[w].location);
         var formattedDescription = HTMLworkDescription.replace(DATA, work.jobs[w].description);
 
+        $(".work-entry:last").append(formattedDates);
         $(".work-entry:last").append(formattedEmployer);
         $(".work-entry:last").append(formattedTitle);
-        $(".work-entry:last").append(formattedDates);
-        $(".work-entry:last").append(formattedLocation);
         $(".work-entry:last").append(formattedDescription);
+        $(".work-entry:last").append(formattedLocation);
       }
     }
   }

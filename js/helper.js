@@ -26,15 +26,15 @@ var HTMLlocation = '%data%';
 var HTMLbioPic = '<img src="%data%" class="biopic img-responsive">';
 var HTMLwelcomeMsg = '%data%';
 
-var HTMLskillsStart = '<h3 id="skills-h3">Skills at a Glance:</h3><ul id="skills" class="flex-column"></ul>';
+var HTMLskillsStart = '<h3 id="skills-h3">I speak web</h3>';
 var HTMLskills = '<div class="flex-item skill-item">%data%</div>';
 
-var HTMLworkStart = '<div class="work-entry"></div>';
-var HTMLworkEmployer = '<a href="#">%data%';
-var HTMLworkTitle = ' - %data%</a>';
-var HTMLworkDates = '<div class="date-text">%data%</div>';
-var HTMLworkLocation = '<div class="location-text">%data%</div>';
-var HTMLworkDescription = '<p><br>%data%</p>';
+var HTMLworkStart = '<div class="work-entry col-sm-4"></div>';
+var HTMLworkEmployer = '<a class="company" href="#" target="_blank">%data%';
+var HTMLworkTitle = '<div class="work-title">%data%</div>';
+var HTMLworkDates = '<div class="work-dates"><em>%data%</em></div>';
+var HTMLworkLocation = '<div class="work-location">%data%</div>';
+var HTMLworkDescription = '<p class="work-description">%data%</p>';
 
 var HTMLprojectStart = '<div class="project-entry"></div>';
 var HTMLprojectTitle = '<a href="#">%data%</a>';
