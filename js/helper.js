@@ -29,15 +29,16 @@ var HTMLwelcomeMsg = '%data%';
 var HTMLskillsStart = '<h3 id="skills-h3">I speak web</h3>';
 var HTMLskills = '<div class="flex-item skill-item">%data%</div>';
 
-var HTMLworkStart = '<div class="work-entry col-sm-4"></div>';
-var HTMLworkEmployer = '<a class="company" href="#" target="_blank">%data%';
-var HTMLworkTitle = '<div class="work-title">%data%</div>';
+var HTMLworkStart = '<div class="work-entry"></div>';
+var HTMLworkEmployer = '<div class="company">%data%</div>';
+var HTMLworkTitle = '<div class="work-title text-grey"><kbd>%data%</kbd></div>';
+var HTMLworkLocation = '<span class="work-location"><span class="fa fa-map-marker"></span><em> %data%</em></span>';
 var HTMLworkDates = '<div class="work-dates"><em>%data%</em></div>';
-var HTMLworkLocation = '<div class="work-location">%data%</div>';
-var HTMLworkDescription = '<p class="work-description">%data%</p>';
+var HTMLworkDescription = '<p class="work-description">%data%</p><hr class="work-separator">';
 
 var HTMLprojectStart = '<div class="project-entry"></div>';
-var HTMLprojectTitle = '<a href="#">%data%</a>';
+var HTMLprojectTitle = '<div class="project-title">%data%</div>';
+var HTMLprojectDemo = '<a class="project-demo" href="http://%data%" target="_blank">%data2%</a>'
 var HTMLprojectDates = '<div class="date-text">%data%</div>';
 var HTMLprojectDescription = '<p><br>%data%</p>';
 var HTMLprojectImage = '<img class="proj-img" src="%data%">';

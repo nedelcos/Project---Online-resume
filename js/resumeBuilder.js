@@ -53,17 +53,17 @@ var work = {
       "location": "Bucharest",
       "dates": "June 2016 - Present",
       "description": "I was assigned the task of building a responsive website for a new department, dedicated for VR prductions. I also\
-      research & documentation on how the business works and made the content for the website. "
+      did research & documentation on how the business works and created the content (copywriting) for the website. "
     },
     {
       "employer": "Tegmark",
-      "title": "Sys Admin",
+      "title": "System Administrator",
       "location": "Bucharest",
       "dates": "November 2015 - Present",
       "description": "I was in charge of administrating the company's websites, web applications and the VPS hosting."
     },
     {
-      "employer": "Metamorph Studio",
+      "employer": "nEAT Office",
       "title": "Web & Graphic designer",
       "location": "Bucharest",
       "dates": "May 2015 - November 2015",
@@ -81,11 +81,11 @@ var work = {
         var formattedLocation = HTMLworkLocation.replace(DATA, work.jobs[w].location);
         var formattedDescription = HTMLworkDescription.replace(DATA, work.jobs[w].description);
 
-        $(".work-entry:last").append(formattedDates);
         $(".work-entry:last").append(formattedEmployer);
-        $(".work-entry:last").append(formattedTitle);
-        $(".work-entry:last").append(formattedDescription);
         $(".work-entry:last").append(formattedLocation);
+        $(".work-entry:last").append(formattedTitle);
+        $(".work-entry:last").append(formattedDates);
+        $(".work-entry:last").append(formattedDescription);
       }
     }
   }
@@ -96,6 +96,7 @@ var projects = {
     {
       "title": "Virtual eXperience",
       "dates": "2016",
+      "demo": "www.virtualx.space",
       "description": "One-man-job project. The website is built in WordPress, using custom page templates.",
       "images": [
         "images/screen_virtualx.jpg",
@@ -105,6 +106,7 @@ var projects = {
     {
       "title": "Rentador",
       "dates": "2015",
+      "demo": "www.rentador.ro",
       "description": "Built in WordPress. The site uses custom page templates. Purpose: Rent a Car website",
       "images": [
         "images/screen_rentador.jpg",
@@ -114,6 +116,7 @@ var projects = {
     {
       "title": "Panda Project",
       "dates": "2014",
+      "demo": "www.pandaproject.ro",
       "description": "Built in Joomla. The website is for a Direct Marketing agency.",
       "images": [
         "images/screen_panda.jpg",
@@ -128,10 +131,12 @@ var projects = {
       for(var p = 0; p < projects.projects.length; p++) {
         var formattedTitle = HTMLprojectTitle.replace(DATA, projects.projects[p].title);
         var formattedDates = HTMLprojectDates.replace(DATA, projects.projects[p].dates);
+        var formattedDemo = HTMLprojectDemo.replace(DATA, projects.projects[p].demo).replace("%data2%", projects.projects[p].demo);
         var formattedDescription = HTMLprojectDescription.replace(DATA, projects.projects[p].description);
 
         $(".project-entry:last").append(formattedTitle);
         $(".project-entry:last").append(formattedDates);
+        $(".project-entry:last").append(formattedDemo);
         $(".project-entry:last").append(formattedDescription);
 
         for (var i = 0; i < projects.projects[p].images.length; i++) {

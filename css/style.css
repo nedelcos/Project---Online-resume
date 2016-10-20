@@ -18,14 +18,6 @@ h6 {
   overflow: auto;
 }
 
-.education-entry,
-.online-education-entry,
-.online-entry,
-.work-entry,
-.project-entry {
-  padding: 0 5%;
-}
-
 h1 {
   font-size: 40px;
   color: #f5a623;
@@ -293,17 +285,17 @@ img {
   color: #fb0909;
   font-style: normal;
   font-weight: 300;
+  margin-bottom: -1em;
 }
 
 .company {
   color: #333;
   font-size: 26px;
-  line-height: 28px;
-  margin-top: 0;
+  margin-top: 2em;
 }
 
 .work-dates {
-  font-size: 14px;
+  font-size: 12px;
   line-height: 28px;
 }
 
@@ -311,6 +303,43 @@ img {
 
 }
 
+.work-entry {
+  max-width: 500px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.work-description {
+  text-align: justify;
+}
+
+.work-location {
+  position: absolute;
+  right: 0;
+}
+.work {
+  background-color: rgba(250, 250, 255, 0.78);;
+  margin-top: 1em;
+  -webkit-box-shadow: inset 0px 0px 17px 3px rgba(0,0,0,0.06);
+  -moz-box-shadow: inset 0px 0px 17px 3px rgba(0,0,0,0.06);
+  box-shadow: inset 0px 0px 17px 3px rgba(0,0,0,0.06);
+  padding-top: 3em;
+  padding-bottom: 5em;
+}
+
+span.fa.fa-map-marker {
+  color: #fb0909;
+}
+
+hr.work-separator {
+  width: 50%;
+  border-top: 1px solid rgba(251, 9, 9, 0.27);
+  margin-top: 4em;
+}
+
+hr.work-separator:last-child {
+  display: none;
+}
 
 /* MEDUA QUERIES */
 
