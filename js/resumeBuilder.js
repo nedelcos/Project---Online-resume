@@ -72,9 +72,9 @@ var work = {
   ],
   "display": function() {
     if(work.jobs.length > 0) {
-      $("#workExperience").append(HTMLworkStart);
-
       for(var w = 0; w < work.jobs.length; w++) {
+        $("#workExperience").append(HTMLworkStart);
+
         var formattedEmployer =  HTMLworkEmployer.replace(DATA, work.jobs[w].employer);
         var formattedTitle = HTMLworkTitle.replace(DATA, work.jobs[w].title);
         var formattedDates = HTMLworkDates.replace(DATA, work.jobs[w].dates);
@@ -94,7 +94,7 @@ var work = {
 var projects = {
   "projects": [
     {
-      "title": "Virtual X",
+      "title": "Virtual eXperience",
       "dates": "2016",
       "demo": "virtualx.space", //type just the domain ( example.com )
       "description": "One-man-job project. For easy content management purposes, the website is built in WordPress, using custom page templates.",
@@ -104,7 +104,7 @@ var projects = {
       ]
     },
     {
-      "title": "Rentador",
+      "title": "Rentador Auto",
       "dates": "2015",
       "demo": "rentador.ro",
       "description": "Built in WordPress,, using a customized theme. The site uses custom page templates. Purpose: Rent a Car website",
@@ -147,8 +147,8 @@ var projects = {
         $(".modal-body:last").append(formattedImageScreen);
         $(".modal-body:last").append(formattedDescription);
 
-        $(".project-entry:last").append(formattedTitle);
         $(".project-entry:last").append(formattedDates);
+        $(".project-entry:last").append(formattedTitle);
         $(".project-entry:last").append(formattedDemo);
       }
     }
@@ -160,13 +160,13 @@ var education = {
     {
       "name": "Hyperion University",
       "location": "Bucharest",
-      "degree": "BA",
+      "degree": "Bachelor Degree",
       "majors": "Journalism & Communication",
       "dates": "2012",
       "url": "http://www.jurnalism.hyperion.ro"
     },
     {
-      "name": "Technical College Campulung",
+      "name": "Technical College",
       "location": "Campulung",
       "degree": "College diploma",
       "majors": "Automatization systems",
@@ -176,8 +176,8 @@ var education = {
   ],
   "onlineCourses": [
     {
-      "title": "Front End Developer Nanodegree",
-      "school": "Udacity",
+      "title": "Front End Developer",
+      "school": "Udacity Nanodegree",
       "dates": "2016",
       "url": "https://profiles.udacity.com/u/danielnedelcu"
     },
@@ -189,42 +189,40 @@ var education = {
     }
   ],
   "display": function () {
-    $("#education").append(HTMLschoolStart);
     if(education.schools.length > 0) {
       for(var i = 0; i < education.schools.length; i++) {
-        var formattedName = HTMLschoolName.replace(DATA, education.schools[i].name);
+        $("#education").append(HTMLschoolStart);
+
+        var formattedName = HTMLschoolName.replace(DATA, education.schools[i].name).replace("#", education.schools[i].url).replace(DATA, "website");
         var formattedDegree = HTMLschoolDegree.replace(DATA, education.schools[i].degree);
         var formattedDates = HTMLschoolDates.replace(DATA, education.schools[i].dates);
         var formattedCity = HTMLschoolLocation.replace(DATA, education.schools[i].location);
         var formattedMajors = HTMLschoolMajor.replace(DATA, education.schools[i].majors);
-        var formattedURL = HTMLschoolURL.replace("#", education.schools[i].url).replace(DATA, "website")
 
         $(".education-entry:last").append(formattedName);
-        $(".education-entry:last").append(formattedDegree);
-        $(".education-entry:last").append(formattedDates);
         $(".education-entry:last").append(formattedCity);
         $(".education-entry:last").append(formattedMajors);
-        $(".education-entry:last").append(formattedURL);
+        $(".education-entry:last").append(formattedDegree);
+        $(".education-entry:last").append(formattedDates);
       }
     }
-    $("#online-education").append(HTMLonlineClasses);
     if(education.onlineCourses.length > 0) {
       for(var o = 0; o < education.onlineCourses.length; o++ ) {
-        var formattedTitle = HTMLonlineTitle.replace(DATA, education.onlineCourses[o].title);
+        $("#online-education").append(HTMLonlineClasses);
+
         var formattedSchool = HTMLonlineSchool.replace(DATA, education.onlineCourses[o].school);
+        var formattedURL = HTMLonlineURL.replace("#", education.onlineCourses[o].url).replace(DATA, "see profile");
+        var formattedTitle = HTMLonlineTitle.replace(DATA, education.onlineCourses[o].title);
         var formattedDates = HTMLonlineDates.replace(DATA, education.onlineCourses[o].dates);
-        var formattedURL = HTMLonlineURL.replace("#", education.onlineCourses[o].url).replace(DATA, "See online profile")
 
-        $(".online-education-entry:last").append(formattedTitle);
         $(".online-education-entry:last").append(formattedSchool);
-        $(".online-education-entry:last").append(formattedDates);
         $(".online-education-entry:last").append(formattedURL);
-
+        $(".online-education-entry:last").append(formattedTitle);
+        $(".online-education-entry:last").append(formattedDates);
       }
     }
   }
 };
-
 
 $(document).click(function(loc) {
   var x = loc.pageX;
