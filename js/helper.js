@@ -36,12 +36,12 @@ var HTMLworkLocation = '<span class="work-location"><span class="fa fa-map-marke
 var HTMLworkDates = '<div class="work-dates"><em>%data%</em></div>';
 var HTMLworkDescription = '<p class="work-description">%data%</p><hr class="work-separator">';
 
-var HTMLprojectStart = '<div class="project-entry"></div>';
-var HTMLprojectTitle = '<div class="project-title">%data%</div>';
-var HTMLprojectDemo = '<a class="project-demo" href="http://%data%" target="_blank">%data2%</a>'
-var HTMLprojectDates = '<div class="date-text">%data%</div>';
-var HTMLprojectDescription = '<p><br>%data%</p>';
-var HTMLprojectImage = '<img class="proj-img" src="%data%">';
+var HTMLprojectStart = '<div class="project-entry col-xs-4"></div>';
+var HTMLprojectTitle = '<div class="project-title text-center" data-toggle="modal" data-target="#myModal%number%">%data%</div>';
+var HTMLprojectDates = '<div class="project-date"><em>%data%</em></div>';
+var HTMLprojectDemo = '<a class="project-demo" href="http://%data%" target="_blank"><kbd><span class="fa fa-globe"></span> %data2%</kbd></a>'
+var HTMLprojectDescription = '<p class="project-description">%data%</p>';
+var HTMLprojectImage = '<img class="proj-img img-responsive" src="%data%">';
 
 var HTMLschoolStart = '<div class="education-entry"></div>';
 var HTMLschoolName = '<a href="#">%data%';
@@ -59,6 +59,23 @@ var HTMLonlineURL = '<br><a href="#" target="_blank">%data%</a>';
 
 var internationalizeButton = '<button>Internationalize</button>';
 var googleMap = '<div id="map"></div>';
+
+
+var HTMLmodal = '<div class="modal fade" id="myModal%number%" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"> \
+  <div class="modal-dialog" role="document"> \
+    <div class="modal-content"> \
+      <div class="modal-header"> \
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button> \
+        <h4 class="modal-title" class="myModalLabel"></h4> \
+      </div> \
+      <div class="modal-body"> \
+      </div> \
+      <div class="modal-footer"> \
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> \
+      </div> \
+    </div> \
+  </div> \
+</div>'
 
 
 /*

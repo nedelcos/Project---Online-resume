@@ -94,50 +94,58 @@ var work = {
 var projects = {
   "projects": [
     {
-      "title": "Virtual eXperience",
+      "title": "Virtual X",
       "dates": "2016",
-      "demo": "www.virtualx.space",
-      "description": "One-man-job project. The website is built in WordPress, using custom page templates.",
+      "demo": "virtualx.space", //type just the domain ( example.com )
+      "description": "One-man-job project. For easy content management purposes, the website is built in WordPress, using custom page templates.",
       "images": [
-        "images/screen_virtualx.jpg",
-        "images/thumb_virtualx.jpg"
+        "images/thumb_virtualx.jpg",
+        "images/screen_virtualx.jpg"
       ]
     },
     {
       "title": "Rentador",
       "dates": "2015",
-      "demo": "www.rentador.ro",
-      "description": "Built in WordPress. The site uses custom page templates. Purpose: Rent a Car website",
+      "demo": "rentador.ro",
+      "description": "Built in WordPress,, using a customized theme. The site uses custom page templates. Purpose: Rent a Car website",
       "images": [
-        "images/screen_rentador.jpg",
-        "images/thumb_rentador.jpg"
+        "images/thumb_rentador.jpg",
+        "images/screen_rentador.jpg"
       ]
     },
     {
       "title": "Panda Project",
       "dates": "2014",
-      "demo": "www.pandaproject.ro",
-      "description": "Built in Joomla. The website is for a Direct Marketing agency.",
+      "demo": "pandaproject.ro",
+      "description": "Built in Joomla, the website is based on a template wich I customized as requested and it is for a Direct Marketing agency.",
       "images": [
-        "images/screen_panda.jpg",
-        "images/thumb_panda.jpg"
+        "images/thumb_panda.jpg",
+        "images/screen_panda.jpg"
       ]
     }
   ],
   "display": function() {
     if(projects.projects.length > 0) {
-      $("#projects").append(HTMLprojectStart);
 
       for(var p = 0; p < projects.projects.length; p++) {
-        var formattedTitle = HTMLprojectTitle.replace(DATA, projects.projects[p].title);
+        $("#projects").append(HTMLprojectStart);
+
+        var formattedTitle = HTMLprojectTitle.replace(DATA, projects.projects[p].title).replace('%number%', p);
         var formattedDates = HTMLprojectDates.replace(DATA, projects.projects[p].dates);
         var formattedDemo = HTMLprojectDemo.replace(DATA, projects.projects[p].demo).replace("%data2%", projects.projects[p].demo);
         var formattedDescription = HTMLprojectDescription.replace(DATA, projects.projects[p].description);
+        var formattedModal = HTMLmodal.replace('%number%', p);
 
+        $("body:last").append(formattedModal);
+        $(".modal-body:last").append(formattedDescription);
+
+
+        console.log(p);
         $(".project-entry:last").append(formattedTitle);
         $(".project-entry:last").append(formattedDates);
         $(".project-entry:last").append(formattedDemo);
         $(".project-entry:last").append(formattedDescription);
+
 
         for (var i = 0; i < projects.projects[p].images.length; i++) {
           var formattedImages = HTMLprojectImage.replace(DATA, projects.projects[p].images[i]);
