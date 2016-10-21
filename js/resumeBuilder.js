@@ -130,27 +130,26 @@ var projects = {
       for(var p = 0; p < projects.projects.length; p++) {
         $("#projects").append(HTMLprojectStart);
 
-        var formattedTitle = HTMLprojectTitle.replace(DATA, projects.projects[p].title).replace('%number%', p);
+        var formattedTitle = HTMLprojectTitle.replace(DATA, projects.projects[p].title);
         var formattedDates = HTMLprojectDates.replace(DATA, projects.projects[p].dates);
         var formattedDemo = HTMLprojectDemo.replace(DATA, projects.projects[p].demo).replace("%data2%", projects.projects[p].demo);
         var formattedDescription = HTMLprojectDescription.replace(DATA, projects.projects[p].description);
+
+        for (var i = 0; i < projects.projects[p].images.length; i++) {
+          var formattedImageThumb = HTMLprojectImage.replace(DATA, projects.projects[p].images[0]).replace('%number%', p);
+          var formattedImageScreen = HTMLprojectImage2.replace(DATA, projects.projects[p].images[1]);
+            $(".project-entry:last").append(formattedImageThumb);
+        }
         var formattedModal = HTMLmodal.replace('%number%', p);
 
         $("body:last").append(formattedModal);
+        $(".modal-title:last").append(formattedTitle);
+        $(".modal-body:last").append(formattedImageScreen);
         $(".modal-body:last").append(formattedDescription);
 
-
-        console.log(p);
         $(".project-entry:last").append(formattedTitle);
         $(".project-entry:last").append(formattedDates);
         $(".project-entry:last").append(formattedDemo);
-        $(".project-entry:last").append(formattedDescription);
-
-
-        for (var i = 0; i < projects.projects[p].images.length; i++) {
-          var formattedImages = HTMLprojectImage.replace(DATA, projects.projects[p].images[i]);
-            $(".project-entry:last").append(formattedImages);
-        }
       }
     }
   }

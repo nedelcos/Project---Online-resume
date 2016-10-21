@@ -37,11 +37,12 @@ var HTMLworkDates = '<div class="work-dates"><em>%data%</em></div>';
 var HTMLworkDescription = '<p class="work-description">%data%</p><hr class="work-separator">';
 
 var HTMLprojectStart = '<div class="project-entry col-xs-4"></div>';
-var HTMLprojectTitle = '<div class="project-title text-center" data-toggle="modal" data-target="#myModal%number%">%data%</div>';
+var HTMLprojectTitle = '<div class="project-title text-center">%data%</div>';
 var HTMLprojectDates = '<div class="project-date"><em>%data%</em></div>';
 var HTMLprojectDemo = '<a class="project-demo" href="http://%data%" target="_blank"><kbd><span class="fa fa-globe"></span> %data2%</kbd></a>'
 var HTMLprojectDescription = '<p class="project-description">%data%</p>';
-var HTMLprojectImage = '<img class="proj-img img-responsive" src="%data%">';
+var HTMLprojectImage = '<img class="proj-img img-responsive"  data-toggle="modal" data-target="#myModal%number%" src="%data%">';
+var HTMLprojectImage2 = '<img class="proj-img2 img-responsive" src="%data%">';
 
 var HTMLschoolStart = '<div class="education-entry"></div>';
 var HTMLschoolName = '<a href="#">%data%';

@@ -336,6 +336,10 @@ hr.work-separator:last-child {
   margin-bottom: 3em;
 }
 
+.proj-img:first-child {
+  display: none !important;
+}
+
 .project-title {
   color: #333;
   font-size: 26px;
