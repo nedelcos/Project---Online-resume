@@ -245,6 +245,11 @@ function map () {
   $("#mapDiv").append(googleMap);
 }
 
+hamnav.addEventListener('click', function(e) {
+  drawer.classList.toggle('open');
+  e.stopPropagation();
+});
+
 
 bio.display();
 work.display();

@@ -19,35 +19,47 @@
   <!-- HEADER -->
   <div class="container-fluid">
     <header id="header" class="row">
+      <div id="hamnav">&#9776;</div> <!--TODO: find a place-->
+      <nav class="drawer navbar navbar-default navbar-fixed-top">
+          <ul class="nav_list">
+            <li class="nav_item"><a class="nav_item_a" href="#workExperience">Work</a></li>
+            <li class="nav_item"><a class="nav_item_a" href="#projects">Projects</a></li>
+            <li class="nav_item"><a class="nav_item_a" href="#education">Education</a></li>
+            <li class="nav_item"><a class="nav_item_a" href="#">Blog</a></li>
+          </ul>
+      </nav>
+    </header>
+
       <!--<div class="get-in-touch text-left col-xs-6">
         <ul id="topContacts"></ul>
         <span id="topSocial"></span>
       </div>-->
-      <div class="name-cont text-right text-uppercase col-xs-6">
-        <h1 class="my-name text-bold"></h1>
-        <h4 class="my-role text-grey"></h4>
+
+  <!-- BIO -->
+    <section class="bio row">
+      <div class="name-cont text-center text-uppercase col-md-3 col-xs-4">
+        <div id="mycarousel" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="item active bio-pic-container">
+              <div class="carousel-caption">
+                <h1 class="my-name text-bold"></h1>
+                <h4 class="my-role text-grey"></h4>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </header>
-    <div class="row bio-pic-container"></div>
-    <div class="bio-location text-center"></div>
-
-  <!-- INTRO -->
-    <div class="row">
-      <p class="intro-message text-center"></p>
-    </div>
-
-  <!-- SKILLS -->
-  <div class="row">
-    <hr class="vert-line">
-    <div class="my-skills text-center col-xs-12"></div>
-  </div>
+      <p class="intro-message col-xs-12 text-center"></p>
+      <hr class="vert-line">
+      <div class="my-skills text-center col-xs-12"></div>
+    </section>
   <!-- WORK -->
     <section class="row work">
       <div id="workExperience" class="col-xs-12 text-center">
         <h3 id="work-h3">Work</h3>
       </div>
     </section>
-  </div>
+  </div> <!--container-fluid END-->
   <!-- PROJECTS -->
   <div class="container">
     <section class="row projects-row">
@@ -55,7 +67,7 @@
         <h3 id="projects-h3" class="text-center">Projects</h3>
       </div>
     </section>
-  </div>
+  </div> <!--container END-->
   <!-- EDUCATION -->
   <div class="container-fluid">
     <section class="row education">

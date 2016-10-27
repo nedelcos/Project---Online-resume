@@ -187,13 +187,12 @@ ul {
 /* HEADER */
 
 #header {
-  background-color: #353535;
-  min-height: 150px;
+
 }
 
 .name-cont {
-    padding-top: 50px;
-    padding-bottom: 50px;
+  margin: 0 auto !important;
+  float: none !important;
 }
 
 .contact-item {
@@ -214,8 +213,12 @@ ul {
   margin-top: 0;
 }
 
+section.bio {
+  margin-top: 100px;
+}
+
 .my-name {
-  color: #fff;
+  color: #333;
   font-weight: 300;
 }
 
@@ -228,10 +231,9 @@ ul {
 
 .biopic {
   padding: 0;
-  width: 200px;
-  margin: 0 auto;
-  margin-top: -100px;
   border: 7px solid #fff;
+  min-width: 280px;
+  width: 100%
 }
 
 .bio-location {
@@ -242,6 +244,7 @@ ul {
   max-width: 700px;
   margin: 0 auto;
   padding: 5em 0 5em 0;
+  float: none !important;
 }
 
 .vert-line {
@@ -508,9 +511,96 @@ hr.online-edu-separator:last-child {
   margin-bottom: 4em;
 }
 
+#hamnav {
+  color: #ccc;
+  display: none;
+  float: right;
+  font-size: 2em;
+  margin-top: 1em;
+  margin-right: 0.5em;
+  cursor:pointer;
+}
+
+.nav_list {
+  padding-top: 13px;
+}
+
+.nav {
+  height:auto;
+  transform:none;
+  position:relative;
+  background: rgba(51, 182, 121, 0);
+}
+
+
+.nav_item {
+  border-top:none;
+  width:24%;
+  display: inline;
+}
+
+.nav_item_a {
+  display: inline;
+}
+
+
+
 /* MEDUA QUERIES */
 
 @media screen and (max-width: 550px) {
+  #hamnav {
+    display: block !important;
+  }
+
+  .nav {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    transform: translateX(700px);
+    transition: transform 0.7s ease;
+    position: absolute;
+    z-index: 5000;
+    background: rgba(255, 255, 255, 0.96);
+    height:100vh;
+  }
+
+  .nav.open {
+        transform: translateY(0);
+
+  }
+
+  .nav_list {
+    width: 50%;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  .nav_list li:first-child {
+    border-top:none;
+  }
+
+  .nav_item {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    line-height: 24px;
+    padding: 24px;
+    text-transform: uppercase;
+    border-top: 1px solid #ddd;
+  }
+
+  .nav a {
+    text-decoration: none;
+    color: #616161;
+    padding: 1.5em;
+  }
+
+  .nav a:hover {
+    text-decoration: underline;
+    color: #212121;
+  }
+
   #header {
   }
   .biopic {

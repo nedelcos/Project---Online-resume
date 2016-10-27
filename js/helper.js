@@ -23,7 +23,7 @@ var HTMLlinkedin = '<a class="fa fa-linkedin social-icon" href="%data%" target="
 var HTMLgithub = '<a class="fa fa-github social-icon" href="%data%" target="_blank"></a>';
 var HTMLlocation = '%data%';
 
-var HTMLbioPic = '<img src="%data%" class="biopic img-responsive">';
+var HTMLbioPic = '<img src="%data%" class="biopic img-thumbnail">';
 var HTMLwelcomeMsg = '%data%';
 
 var HTMLskillsStart = '<h3 id="skills-h3">I speak web</h3>';
