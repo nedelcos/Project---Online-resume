@@ -18,16 +18,16 @@ var HTMLheaderRole = '%data%';
 var HTMLcontactGeneric = '<li class="flex-item"><span class="orange-text">%contact%</span><span class="white-text">%data%</span></li>';
 var HTMLmobile = '<li class="contact-item">☎ %data%</li>';
 var HTMLemail = '<li class="contact-item">✉ %data%</li>';
-var HTMLfacebook = '<a class="fa fa-facebook social-icon" href="%data%" target="_blank"></a>';
-var HTMLlinkedin = '<a class="fa fa-linkedin social-icon" href="%data%" target="_blank"></a>';
-var HTMLgithub = '<a class="fa fa-github social-icon" href="%data%" target="_blank"></a>';
+var HTMLfacebook = '<li class="social_icon"><a class="social_icon fa fa-facebook" href="%data%" target="_blank"></a></li>';
+var HTMLlinkedin = '<li class="social_icon"><a class="social_icon fa fa-linkedin" href="%data%" target="_blank"></a></li>';
+var HTMLgithub = '<li class="social_icon"><a class="social_icon fa fa-github" href="%data%" target="_blank"></a></li>';
 var HTMLlocation = '%data%';
 
-var HTMLbioPic = '<img src="%data%" class="biopic img-thumbnail">';
+var HTMLbioPic = '<img src="%data%" class="img-responsive">';
 var HTMLwelcomeMsg = '%data%';
 
 var HTMLskillsStart = '<h3 id="skills-h3">I speak web</h3>';
-var HTMLskills = '<div class="flex-item skill-item">%data%</div>';
+var HTMLskills = '<div class="skill-item col-sm-3">%data%</div>';
 
 var HTMLworkStart = '<div class="work-entry"></div><hr class="work-separator">';
 var HTMLworkEmployer = '<div class="company">%data%</div>';

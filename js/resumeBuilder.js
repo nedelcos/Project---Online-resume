@@ -12,8 +12,10 @@ var bio = {
     "location": "Berlin"
   },
   "welcomeMessage": "I am Daniel & I love to build neat, responsive websites. If you are a company looking for a new Front End Developer and your HQ is in Berlin, then I might just be the man for the job.",
-  "skills": ["HTML5", "CSS3", "Bootstrap", "Javascript", "jQuery", "CMS", "Photoshop", "inDesign", "SEO & SEM"],
+  "skills": ["HTML5", "CSS3", "Bootstrap", "Javascript", "jQuery", "Git", "CMS", "Photoshop", "inDesign", "SEO & SEM"],
   "bioPic": "images/me.jpg",
+  "age": "26",
+  "initials": "DN",
   "display": function() {
     var formattedName = HTMLheaderName.replace(DATA, bio.name);
     var formattedRole = HTMLheaderRole.replace(DATA, bio.role);
@@ -23,7 +25,7 @@ var bio = {
     var formattedPic = HTMLbioPic.replace(DATA, bio.bioPic);
     var formattedMessage = HTMLwelcomeMsg.replace(DATA, bio.welcomeMessage);
     var formattedLocation = HTMLlocation.replace(DATA, bio.contacts.location);
-      $(".bio-pic-container").append(formattedPic);
+      $(".biopic").prepend(formattedPic);
       $(".bio-location").append(formattedLocation);
       $(".intro-message").append(formattedMessage);
 
@@ -40,8 +42,8 @@ var bio = {
     var formattedFacebook = HTMLfacebook.replace(DATA, bio.contacts.facebook);
     var formattedLinkedIn = HTMLlinkedin.replace(DATA, bio.contacts.linkedin);
     var formattedGitHub = HTMLgithub.replace(DATA, bio.contacts.github);
-      $("#topContacts, #footerContacts").append(formattedEmail + formattedMobile);
-      $("#topSocial, #footerSocial").append(formattedFacebook + formattedLinkedIn + formattedGitHub);
+      $(".topContacts, #footerContacts").append(formattedEmail + formattedMobile);
+      $(".navbar-right, #footerSocial").append(formattedFacebook + formattedLinkedIn + formattedGitHub);
   }
 };
 
@@ -245,11 +247,10 @@ function map () {
   $("#mapDiv").append(googleMap);
 }
 
-hamnav.addEventListener('click', function(e) {
-  drawer.classList.toggle('open');
-  e.stopPropagation();
+$(".nav a").on("click", function(){
+   $(".nav").find(".active").removeClass("active");
+   $(this).parent().addClass("active");
 });
-
 
 bio.display();
 work.display();

@@ -14,6 +14,10 @@ h6 {
   font-family: 'Quicksand', sans-serif;
 }
 
+body {
+  position: relative;
+}
+
 .clear-fix {
   overflow: auto;
 }
@@ -186,6 +190,10 @@ ul {
 
 /* HEADER */
 
+a.nav-link {
+    margin-bottom: 10px;
+}
+
 #header {
 
 }
@@ -193,6 +201,8 @@ ul {
 .name-cont {
   margin: 0 auto !important;
   float: none !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 
 .contact-item {
@@ -206,13 +216,6 @@ ul {
     margin-right: 10px;
 }
 
-.social-icon {
-  margin-right: 0.8em;
-  font-size: 1.5em !important;
-  color: #333;
-  margin-top: 0;
-}
-
 section.bio {
   margin-top: 100px;
 }
@@ -220,6 +223,7 @@ section.bio {
 .my-name {
   color: #333;
   font-weight: 300;
+  opacity: 1; !important;
 }
 
 .my-role {
@@ -227,13 +231,11 @@ section.bio {
   font-weight: 700;
   margin: 0;
   padding: 10px 3px 0 0;
+  opacity: 1; !important;
 }
 
 .biopic {
-  padding: 0;
-  border: 7px solid #fff;
-  min-width: 280px;
-  width: 100%
+
 }
 
 .bio-location {
@@ -511,96 +513,11 @@ hr.online-edu-separator:last-child {
   margin-bottom: 4em;
 }
 
-#hamnav {
-  color: #ccc;
-  display: none;
-  float: right;
-  font-size: 2em;
-  margin-top: 1em;
-  margin-right: 0.5em;
-  cursor:pointer;
-}
-
-.nav_list {
-  padding-top: 13px;
-}
-
-.nav {
-  height:auto;
-  transform:none;
-  position:relative;
-  background: rgba(51, 182, 121, 0);
-}
-
-
-.nav_item {
-  border-top:none;
-  width:24%;
-  display: inline;
-}
-
-.nav_item_a {
-  display: inline;
-}
-
 
 
 /* MEDUA QUERIES */
 
 @media screen and (max-width: 550px) {
-  #hamnav {
-    display: block !important;
-  }
-
-  .nav {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    transform: translateX(700px);
-    transition: transform 0.7s ease;
-    position: absolute;
-    z-index: 5000;
-    background: rgba(255, 255, 255, 0.96);
-    height:100vh;
-  }
-
-  .nav.open {
-        transform: translateY(0);
-
-  }
-
-  .nav_list {
-    width: 50%;
-    padding: 0;
-    margin: 0 auto;
-  }
-
-  .nav_list li:first-child {
-    border-top:none;
-  }
-
-  .nav_item {
-    box-sizing: border-box;
-    display: inline-block;
-    width: 100%;
-    text-align: center;
-    line-height: 24px;
-    padding: 24px;
-    text-transform: uppercase;
-    border-top: 1px solid #ddd;
-  }
-
-  .nav a {
-    text-decoration: none;
-    color: #616161;
-    padding: 1.5em;
-  }
-
-  .nav a:hover {
-    text-decoration: underline;
-    color: #212121;
-  }
-
   #header {
   }
   .biopic {
@@ -646,6 +563,10 @@ hr.online-edu-separator:last-child {
 
 
 @media screen and (max-width: 768px) {
+  .social_icon {
+      display: inline !important;
+  }
+
   .my-name {
     font-weight: 300;
     font-size: 26px;
