@@ -13,7 +13,7 @@ var bio = {
   },
   "welcomeMessage": "I am Daniel & I love to build neat, responsive websites. If you are a company looking for a new Front End Developer and your HQ is in Berlin, then I might just be the man for the job.",
   "skills": ["HTML5", "CSS3", "Bootstrap", "Javascript", "jQuery", "Git", "CMS", "Photoshop", "inDesign", "SEO & SEM"],
-  "bioPic": "images/me.jpg",
+  "bioPic": "images/me_cut.png",
   "age": "26",
   "initials": "DN",
   "display": function() {

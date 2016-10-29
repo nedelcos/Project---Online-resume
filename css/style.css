@@ -190,6 +190,21 @@ ul {
 
 /* HEADER */
 
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:focus,
+.navbar-default .navbar-nav>.active>a:hover {
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-box-shadow: inset 0px 0px 3px 0px rgba(0,0,0,0.12);
+    -moz-box-shadow: inset 0px 0px 3px 0px rgba(0,0,0,0.12);
+    box-shadow: inset 0px 0px 3px 0px rgba(0,0,0,0.12);
+}
+
+
+
+
+
 a.nav-link {
     margin-bottom: 10px;
 }
@@ -216,8 +231,8 @@ a.nav-link {
     margin-right: 10px;
 }
 
-section.bio {
-  margin-top: 100px;
+#bio {
+  padding-top: 120px;
 }
 
 .my-name {
@@ -235,7 +250,7 @@ section.bio {
 }
 
 .biopic {
-
+  margin-bottom: -15px;
 }
 
 .bio-location {
@@ -290,7 +305,7 @@ section.bio {
 }
 
 #workExperience {
-
+  padding-top: 50px;
 }
 
 .work-entry {
@@ -313,8 +328,6 @@ section.bio {
   -webkit-box-shadow: inset 0px 0px 17px 3px rgba(0,0,0,0.06);
   -moz-box-shadow: inset 0px 0px 17px 3px rgba(0,0,0,0.06);
   box-shadow: inset 0px 0px 17px 3px rgba(0,0,0,0.06);
-  padding-top: 3em;
-  padding-bottom: 5em;
 }
 
 span.fa.fa-map-marker {
@@ -330,6 +343,10 @@ hr.work-separator {
 
 hr.work-separator:last-child {
   display: none;
+}
+
+#projects {
+  padding-top: 50px;
 }
 
 #projects-h3 {
@@ -404,6 +421,10 @@ hr.proj-separator {
 
 hr.proj-separator:last-child {
   display: none !important;
+}
+
+#education-cont {
+  padding-top: 50px;
 }
 
 #edu-h3 {
