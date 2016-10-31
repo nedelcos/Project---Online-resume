@@ -13,21 +13,23 @@ These are HTML strings. As part of the course, you'll be using JavaScript functi
 replace the %data% placeholder text you see in them.
 */
 var HTMLheaderName = '%data%';
-var HTMLheaderRole = '%data%';
+var HTMLheaderRole = '<strong>%data%</strong>';
 
 var HTMLcontactGeneric = '<li class="flex-item"><span class="orange-text">%contact%</span><span class="white-text">%data%</span></li>';
-var HTMLmobile = '<li class="contact-item">☎ %data%</li>';
-var HTMLemail = '<li class="contact-item">✉ %data%</li>';
+var HTMLmobile = '<li class="white-text contact-item">☎ %data%</li>';
+var HTMLemail = '<li class="white-text contact-item">✉ %data%</li>';
 var HTMLfacebook = '<li class="social_icon"><a class="social_icon fa fa-facebook" href="%data%" target="_blank"></a></li>';
 var HTMLlinkedin = '<li class="social_icon"><a class="social_icon fa fa-linkedin" href="%data%" target="_blank"></a></li>';
 var HTMLgithub = '<li class="social_icon"><a class="social_icon fa fa-github" href="%data%" target="_blank"></a></li>';
-var HTMLlocation = '%data%';
+var HTMLlocation = '<span class="bio-location"><span class="fa fa-map-marker"></span> %data%</span>';
+var HTMLage = '<span class="bio-age"><span class="fa fa-birthday-cake"></span> %data%</span>';
+var HTMLinitials = '<strong>%data%</strong>';
 
-var HTMLbioPic = '<img src="%data%" class="img-responsive">';
+var HTMLbioPic = '<img src="%data%" class="img-responsive bio-img">';
 var HTMLwelcomeMsg = '%data%';
 
 var HTMLskillsStart = '<h3 id="skills-h3">I speak web</h3>';
-var HTMLskills = '<div class="skill-item col-sm-3">%data%</div>';
+var HTMLskills = '<span class="skill-item">%data%</span>';
 
 var HTMLworkStart = '<div class="work-entry"></div><hr class="work-separator">';
 var HTMLworkEmployer = '<div class="company">%data%</div>';

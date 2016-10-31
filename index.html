@@ -8,56 +8,54 @@
   <meta charset="utf-8">
   <title>Resume - Daniel Nedelcu</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Rajdhani:300,500,600,700" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" rel="stylesheet" crossorigin="anonymous">
   <script src="js/jQuery.js"></script>
-  <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.4/js/bootstrap.min.js"></script>-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.4/js/bootstrap.min.js"></script>
 	<script src="https://use.fontawesome.com/c54842ddb7.js"></script>
   <script src="js/bootstrap-scrollspy.js"></script>
-
 </head>
-<body data-spy="scroll" data-target="#mainNav" data-offset="">
+<body data-spy="scroll" data-target="#mainNav">
   <nav id="mainNav" class="navbar navbar-fixed-top navbar-default">
     <div class="container-fluid">
-      <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#cc-colapse-nav" aria-expanded="false">
+          <span class="sr-only">Toggle nav</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#"><strong>DN</strong></a> <!--TODO insert from javascript-->
+        <a class="navbar-brand" href="#"></a>
       </div>
-
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <div class="collapse navbar-collapse" id="cc-colapse-nav">
         <ul class="nav navbar-nav">
-          <li class="nav-item active"><a class="nav-link" href="#bio">Intro <span class="sr-only">(current)</span></a></li>
-          <li class="nav-item"><a class="nav-link" href="#workExperience">Work</a></li>
-          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="#education-cont">Education</a></li>
-          <li class="nav-item"><a class="nav-link" href="#workExperience">Contact</a></li>
+          <li class="nav-item text-center active"><a class="nav-link" href="#bio">Intro <span class="sr-only">(current)</span></a></li>
+          <li class="nav-item text-center"><a class="nav-link" href="#workExperience">Work</a></li>
+          <li class="nav-item text-center"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item text-center"><a class="nav-link" href="#education-cont">Education</a></li>
+          <li class="nav-item text-center"><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
-
-        <ul class="nav navbar-nav navbar-right"></ul>
-      </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
+        <ul class="nav navbar-nav text-center navbar-right"></ul>
+      </div>
+    </div>
   </nav>
-
   <!-- BIO -->
   <div class="container">
     <section class="bio row">
       <div id="bio" class="bio-cont text-center col-sm-12">
-        <div class="biopic col-sm-4 bottom-align-text"></div>
-        <div class="bio-details col-sm-8">
-          <h1 class="my-name text-bold"></h1>
-          <h4 class="my-role text-grey"></h4>
-          <span class="bio-location"></span>
-          <p class="intro-message col-xs-12 text-center"></p>
-          <hr class="vert-line">
-          <div class="my-skills text-center col-xs-12"></div>
+        <div class="biopic col-lg-3 col-md-4 col-sm-5 col-xs-5 bottom-align-text"></div>
+        <div class="bio col-lg-9 col-md-8 col-sm-7 col-xs-6">
+          <div class="title-cont text-left col-xs-12">
+            <h1 class="my-name display-1 col-xs-12"></h1>
+            <h2 class="my-role display-4 col-xs-12"></h2>
+          </div>
+          <h2 class="hi text-left col-xs-12"><strong><em>Hi,</em></strong></h2>
+          <p class="intro-message lead text-left col-md-6 col-sm-9 col-xs-12"></p>
+          <div class="line-cont col-xs-12">
+            <hr>
+          </div>
+          <div class="my-skills col-xs-12"></div>
         </div>
       </div>
     </section>
@@ -66,7 +64,7 @@
   <!-- WORK -->
     <section class="row work">
       <div id="workExperience" class="col-xs-12 text-center">
-        <h3 id="work-h3">Work</h3>
+        <h3 class="section-title">Work Experience</h3>
       </div>
     </section>
   </div> <!--container-fluid END-->
@@ -74,7 +72,7 @@
   <div class="container">
     <section class="row projects-row">
       <div id="projects" class="text-center col-xs-12">
-        <h3 id="projects-h3" class="text-center">Projects</h3>
+        <h3 class="section-title proj-title">Projects</h3>
       </div>
     </section>
   </div> <!--container END-->
@@ -82,20 +80,28 @@
   <div class="container-fluid">
     <section id="education-cont" class="row education">
       <div id="education" class="text-center col-md-6">
-        <h3 id="edu-h3">Education</h3>
+        <h3 class="section-title edu-title">Education</h3>
       </div>
       <div id="online-education" class="text-center col-md-6">
         <hr class="edu-sep">
-        <h3 id="online-edu-h3">Online Education</h3>
+        <h3 class="section-title online-edu-title">Online Education</h3>
       </div>
     </section>
-    <div id="mapDiv">
-      <h2>Where I've Lived and Worked</h2>
-    </div>
-    <div id="lets-connect" class="dark-gray">
-      <h2 class="orange center-text">Let's Connect</h2>
-        <ul id="footerContacts" class="flex-box"></ul>
-        <ul id="footerSocial" class="flex-box"></ul>
+    <footer class="row">
+      <div id="contact" class="col-md-6 col-sm-5 col-xs-12">
+        <h2 class="section-title contact-title">Contact Me</h2>
+          <ul id="footerContacts"></ul>
+          <ul id="footerSocial"></ul>
+      </div>
+      <div id="mapDiv" class="col-md-6 col-sm-7 col-xs-12">
+        <h2 class="white-text map-title">Where I've Lived and Worked</h2>
+      </div>
+    </footer>
+    <div class="row sub-footer">
+      <span class="fa fa-copyright white-text"></span>
+      <span class="white-text">
+        No copyright rules here. If like my design, you can use it with no restrictions.
+      </span>
     </div>
   </div>
 

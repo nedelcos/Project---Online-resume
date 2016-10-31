@@ -25,9 +25,13 @@ var bio = {
     var formattedPic = HTMLbioPic.replace(DATA, bio.bioPic);
     var formattedMessage = HTMLwelcomeMsg.replace(DATA, bio.welcomeMessage);
     var formattedLocation = HTMLlocation.replace(DATA, bio.contacts.location);
+    var formattedInitials = HTMLinitials.replace(DATA, bio.initials);
+    var formattedAge = HTMLage.replace(DATA, bio.age);
       $(".biopic").prepend(formattedPic);
-      $(".bio-location").append(formattedLocation);
+      $(".title-cont").append(formattedLocation);
+      $(".title-cont").append(formattedAge);
       $(".intro-message").append(formattedMessage);
+      $('.navbar-brand').prepend(formattedInitials);
 
     if (bio.skills.length > 0) {
       $(".my-skills").prepend(HTMLskillsStart);
