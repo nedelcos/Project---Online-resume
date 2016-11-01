@@ -23,7 +23,7 @@ var HTMLlinkedin = '<li class="social_icon"><a class="social_icon fa fa-linkedin
 var HTMLgithub = '<li class="social_icon"><a class="social_icon fa fa-github" href="%data%" target="_blank"></a></li>';
 var HTMLlocation = '<span class="bio-location"><span class="fa fa-map-marker"></span> %data%</span>';
 var HTMLage = '<span class="bio-age"><span class="fa fa-birthday-cake"></span> %data%</span>';
-var HTMLinitials = '<strong>%data%</strong>';
+var HTMLlogo = '<img src="%data%">';
 
 var HTMLbioPic = '<img src="%data%" class="img-responsive bio-img">';
 var HTMLwelcomeMsg = '%data%';
@@ -38,12 +38,12 @@ var HTMLworkLocation = '<span class="work-location"><span class="fa fa-map-marke
 var HTMLworkDates = '<div class="work-dates"><em>%data%</em></div>';
 var HTMLworkDescription = '<p class="work-description">%data%</p>';
 
-var HTMLprojectStart = '<div class="project-entry text-center col-sm-4 col-xs-12"></div><hr class="proj-separator">';
-var HTMLprojectTitle = '<div class="project-title text-center">%data%</div>';
-var HTMLprojectDates = '<div class="project-date"><em>%data%</em></div>';
-var HTMLprojectDemo = '<a class="project-demo" href="http://%data%" target="_blank"><kbd><span class="fa fa-globe"></span> %data2%</kbd></a>'
+var HTMLprojectStart = '<div class="text-center col-sm-4 col-xs-12"><div class="panel panel-default project-entry"></div></div>';
+var HTMLprojectTitle = '<div class="panel-body project-title text-center">%data%</div>';
+var HTMLprojectDates = '<ul class="list-group text-center"><li class="list-group-item"><i class="fa fa-calendar-check-o"></i> %data%</li></ul>';
+var HTMLprojectDemo = '<div class="panel-footer"><a class="project-demo btn btn-lg btn-block btn-primary" href="http://%data%" target="_blank"<span class="fa fa-globe"></span> %data2%</a></div>'
 var HTMLprojectDescription = '<p class="project-description">%data%</p>';
-var HTMLprojectImage = '<img class="proj-img img-responsive"  data-toggle="modal" data-target="#myModal%number%" src="%data%">';
+var HTMLprojectImage = '<div class="panel-heading"><img class="proj-img img-responsive"  data-toggle="modal" data-target="#myModal%number%" src="%data%"></div>';
 var HTMLprojectImage2 = '<img class="proj-img2 img-responsive" src="%data%">';
 
 var HTMLschoolStart = '<div class="education-entry"></div><hr class="edu-separator">';
