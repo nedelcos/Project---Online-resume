@@ -17,6 +17,7 @@ var bio = {
     "logo": "images/logo.png",
     "age": "26",
     "display": function() {
+
         var formattedName = HTMLheaderName.replace(DATA, bio.name);
         var formattedRole = HTMLheaderRole.replace(DATA, bio.role);
         $(".my-role").prepend(formattedRole);
@@ -31,10 +32,11 @@ var bio = {
         $(".title-cont").append(formattedLocation);
         $(".title-cont").append(formattedAge);
         $(".intro-message").append(formattedMessage);
-        $('.navbar-brand').prepend(formattedLogo);
+        $(".navbar-brand").prepend(formattedLogo);
 
         if (bio.skills.length > 0) {
             $(".my-skills").prepend(HTMLskillsStart);
+
             for (var i = 0; i < bio.skills.length; i++) {
                 var formattedSkills = HTMLskills.replace(DATA, bio.skills[i]);
                 $(".my-skills").append(formattedSkills);
@@ -57,20 +59,19 @@ var work = {
         "title": "Web Developer Intern",
         "location": "Bucharest",
         "dates": "June 2016 - Present",
-        "description": "I was assigned the task of building a responsive website for a new department, dedicated for VR prductions. I also\
-      did research & documentation on how the business works and created the content (copywriting) for the website. "
+        "description": "I was assigned the task of building a responsive website for a new department, dedicated for VR productions. I also did research & documentation on how the business works and created the content (copywriting) for the website."
     }, {
         "employer": "Tegmark",
         "title": "System Administrator",
         "location": "Bucharest",
         "dates": "November 2015 - Present",
-        "description": "I was in charge of administrating the company's websites, web applications and the VPS hosting."
+        "description": "I was in charge of administering the company's websites, web applications and the VPS hosting."
     }, {
         "employer": "nEAT Office",
         "title": "Web & Graphic designer",
         "location": "Bucharest",
         "dates": "May 2015 - November 2015",
-        "description": "I created 2 websites for the company & also created the layouts for the printed newspapers (in inDesign)."
+        "description": "I created 2 websites for the company & also created the layouts for the printed newspapers (in Adobe InDesign)."
     }],
     "display": function() {
         if (work.jobs.length > 0) {
@@ -82,7 +83,6 @@ var work = {
                 var formattedDates = HTMLworkDates.replace(DATA, work.jobs[w].dates);
                 var formattedLocation = HTMLworkLocation.replace(DATA, work.jobs[w].location);
                 var formattedDescription = HTMLworkDescription.replace(DATA, work.jobs[w].description);
-
                 $(".work-entry:last").append(formattedEmployer);
                 $(".work-entry:last").append(formattedLocation);
                 $(".work-entry:last").append(formattedTitle);
@@ -116,7 +116,7 @@ var projects = {
         "title": "Panda Project",
         "dates": "2014",
         "demo": "pandaproject.ro",
-        "description": "Built in Joomla, the website is based on a template wich I customized as requested and it is for a Direct Marketing agency.",
+        "description": "Built in Joomla, the website is based on a template which I customized as requested.Purpose: Direct Marketing agency.",
         "images": [
             "images/thumb_panda.jpg",
             "images/screen_panda.jpg"
@@ -134,11 +134,11 @@ var projects = {
                 var formattedDescription = HTMLprojectDescription.replace(DATA, projects.projects[p].description);
 
                 for (var i = 0; i < projects.projects[p].images.length; i++) {
-                    var formattedImageThumb = HTMLprojectImage.replace(DATA, projects.projects[p].images[0]).replace('%number%', p);
+                    var formattedImageThumb = HTMLprojectImage.replace(DATA, projects.projects[p].images[0]).replace("%number%", p);
                     var formattedImageScreen = HTMLprojectImage2.replace(DATA, projects.projects[p].images[1]);
                     $(".project-entry:last").append(formattedImageThumb);
                 }
-                var formattedModal = HTMLmodal.replace('%number%', p);
+                var formattedModal = HTMLmodal.replace("%number%", p);
 
                 $("body:last").append(formattedModal);
                 $(".modal-title:last").append(formattedTitle);
@@ -168,6 +168,20 @@ var education = {
         "majors": "Automatization systems",
         "dates": "2009",
         "url": "http://gstaro.muscel.ro"
+    }, {
+        "name": "VEHMED MEDIA",
+        "location": "Bucharest",
+        "degree": "EU Certification",
+        "majors": "Journalism",
+        "dates": "2010",
+        "url": "http://vehmed.ro"
+    }, {
+        "name": "Google DIGITAL WORKSHOP",
+        "location": "Bucharest",
+        "degree": "Certificate of Participation",
+        "majors": "Digital Marketing",
+        "dates": "2016",
+        "url": "http://leaders.ro/atelieruldigital"
     }],
     "onlineCourses": [{
         "title": "Front End Developer",
@@ -179,6 +193,16 @@ var education = {
         "school": "CodeAcademy",
         "dates": "2016",
         "url": "https://www.codecademy.com/users/netWhiz20456/achievements"
+    }, {
+        "title": "Digital Marketing",
+        "school": "Google DIGITAL WORKSHOP",
+        "dates": "2016",
+        "url": "http://leaders.ro/atelieruldigital"
+    }, {
+        "title": "Javascript",
+        "school": "SoloLearn",
+        "dates": "2016",
+        "url": "https://www.sololearn.com/Profile/1763887#"
     }],
     "display": function() {
         if (education.schools.length > 0) {
@@ -227,7 +251,7 @@ function locationizer() {
     var workLocations = [];
 
     for (var i = 0; i < work.jobs.length; i++) {
-        var newLocation = work.jobs[i].location;
+        var newLocation   = work.jobs[i].location;
         workLocations.push(newLocation);
     }
     return workLocations;
@@ -242,9 +266,9 @@ $(".nav a").on("click", function() {
     $(this).parent().addClass("active");
 });
 
-$(document).on('click', '.navbar-collapse.in', function(e) {
-    if ($(e.target).is('a')) {
-        $(this).collapse('hide');
+$(document).on("click", ".navbar-collapse.in", function(e) {
+    if ($(e.target).is("a")) {
+        $(this).collapse("hide");
     }
 });
 
