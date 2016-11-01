@@ -2,6 +2,6 @@
 
 Project - Online Resume
 
-FRONT END DEVELOPER Nanodegree
+FRONT END DEVELOPER Nanodegree 
 
 > [View Resume](http://webcreator.space/).
