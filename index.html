@@ -36,29 +36,31 @@
 </head>
 
 <body data-spy="scroll" data-target="#mainNav">
-  <nav id="mainNav" class="navbar navbar-fixed-top navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#cc-colapse-nav" aria-expanded="false">
-          <span class="sr-only">Toggle nav</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#"></a>
+  <header>
+    <nav id="mainNav" class="navbar navbar-fixed-top navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#cc-colapse-nav" aria-expanded="false">
+            <span class="sr-only">Toggle nav</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"></a>
+        </div>
+        <div class="collapse navbar-collapse" id="cc-colapse-nav">
+          <ul class="nav navbar-nav">
+            <li class="nav-item text-center active"><a class="nav-link" href="#bio">Intro <span class="sr-only">(current)</span></a></li>
+            <li class="nav-item text-center"><a class="nav-link" href="#workExperience">Work</a></li>
+            <li class="nav-item text-center"><a class="nav-link" href="#projects">Projects</a></li>
+            <li class="nav-item text-center"><a class="nav-link" href="#education-cont">Education</a></li>
+            <li class="nav-item text-center"><a class="nav-link" href="#contact">Contact</a></li>
+          </ul>
+          <ul class="nav navbar-nav text-center navbar-right"><div class="topContacts"></div></ul>
+        </div>
       </div>
-      <div class="collapse navbar-collapse" id="cc-colapse-nav">
-        <ul class="nav navbar-nav">
-          <li class="nav-item text-center active"><a class="nav-link" href="#bio">Intro <span class="sr-only">(current)</span></a></li>
-          <li class="nav-item text-center"><a class="nav-link" href="#workExperience">Work</a></li>
-          <li class="nav-item text-center"><a class="nav-link" href="#projects">Projects</a></li>
-          <li class="nav-item text-center"><a class="nav-link" href="#education-cont">Education</a></li>
-          <li class="nav-item text-center"><a class="nav-link" href="#contact">Contact</a></li>
-        </ul>
-        <ul class="nav navbar-nav text-center navbar-right"></ul>
-      </div>
-    </div>
-  </nav>
+    </nav>
+  </header>  
   <!-- BIO -->
   <div class="container">
     <section class="bio row">
@@ -110,7 +112,7 @@
     <footer class="row">
       <div id="contact" class="col-md-6 col-sm-5 col-xs-12">
         <h2 class="section-title contact-title">Contact Me</h2>
-        <ul id="footerContacts"></ul>
+        <ul id="footerContacts"><div class="footer-loc"></div></ul>
         <ul id="footerSocial"></ul>
       </div>
       <div id="mapDiv" class="col-md-6 col-sm-7 col-xs-12">
@@ -120,7 +122,7 @@
     <div class="row sub-footer">
       <span class="fa fa-copyright white-text"></span>
       <span class="white-text">
-        No copyright rules here. If like my design, you can use it with no restrictions.
+        No copyright rules here. If you like my design, you can use it with no restrictions.
       </span>
     </div>
   </div>

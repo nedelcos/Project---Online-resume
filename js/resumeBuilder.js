@@ -15,7 +15,7 @@ var bio = {
     },
     "welcomeMessage": "I am Daniel & I love to build neat, responsive websites. If you are a company looking for a new Front End Developer and your HQ is in Berlin, then I might just be the man for the job.",
     "skills": ["HTML5", "CSS3", "Bootstrap", "Javascript", "jQuery", "Git", "CMS", "Photoshop", "inDesign", "SEO & SEM"],
-    "bioPic": "images/me_cut.png",
+    "biopic": "images/me_cut.png",
     "logo": "images/logo.png",
     "age": "26",
     "display": function() {
@@ -24,14 +24,14 @@ var bio = {
         $(".my-role").prepend(formattedRole);
         $(".my-name").prepend(formattedName);
 
-        var formattedPic = HTMLbioPic.replace(DATA, bio.bioPic);
+        var formattedPic = HTMLbioPic.replace(DATA, bio.biopic);
         var formattedMessage = HTMLwelcomeMsg.replace(DATA, bio.welcomeMessage);
         var formattedLocation = HTMLlocation.replace(DATA, bio.contacts.location);
         var formattedLogo = HTMLlogo.replace(DATA, bio.logo);
         var formattedAge = HTMLage.replace(DATA, bio.age);
 
         $(".biopic").prepend(formattedPic);
-        $(".title-cont").append(formattedLocation);
+        $(".title-cont, .footer-loc").append(formattedLocation);
         $(".title-cont").append(formattedAge);
         $(".intro-message").append(formattedMessage);
         $(".navbar-brand").prepend(formattedLogo);
@@ -175,28 +175,28 @@ var education = {
         "name": "Hyperion University",
         "location": "Bucharest",
         "degree": "Bachelor Degree",
-        "majors": "Journalism & Communication",
+        "majors": ["Journalism & Communication"],
         "dates": "2012",
         "url": "http://www.jurnalism.hyperion.ro"
     }, {
         "name": "Technical College",
         "location": "Campulung",
         "degree": "College diploma",
-        "majors": "Automatization systems",
+        "majors": ["Automatization systems"],
         "dates": "2009",
         "url": "http://gstaro.muscel.ro"
     }, {
         "name": "VEHMED MEDIA",
         "location": "Bucharest",
         "degree": "EU Certification",
-        "majors": "Journalism",
+        "majors": ["Journalism"],
         "dates": "2010",
         "url": "http://vehmed.ro"
     }, {
         "name": "Google DIGITAL WORKSHOP",
         "location": "Bucharest",
         "degree": "Certificate of Participation",
-        "majors": "Digital Marketing",
+        "majors": ["Digital Marketing"],
         "dates": "2016",
         "url": "http://leaders.ro/atelieruldigital"
     }],

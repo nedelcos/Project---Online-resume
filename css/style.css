@@ -106,7 +106,22 @@ ul {
 a.nav-link {
     margin-bottom: 10px;
 }
-#header {} .title-cont.text-left {
+
+.topContacts>li {
+  color: #777777;
+  position: relative;
+  display: inline-block !important;
+  padding: 0 1em 0 1em;
+  font-weight: 500;
+}
+
+.topContacts {
+  float: left;
+  padding-top: 2.2em;
+  font-size: 12px;
+}
+
+.title-cont.text-left {
     margin-top: 2em;
 }
 .name-cont {
@@ -441,6 +456,16 @@ footer {
     color: #ddd !important;
     text-decoration: none !important;
 }
+
+.footer-loc>span {
+  color: #fff !important;
+}
+
+.footer-loc {
+    padding: 0.3em;
+}
+
+
 /* MEDUA QUERIES */
 
 @media screen and (max-width: 420px) {
@@ -570,6 +595,10 @@ footer {
         top: 0;
         text-align: center;
     }
+
+    .topContacts {
+      display: none;
+    }
 }
 @media screen and (min-width: 767px) and (max-width: 990px) {
     #footerSocial>li>a {
@@ -581,6 +610,10 @@ footer {
     }
     .project-title {
         font-size: 20px !important;
+    }
+
+    .topContacts {
+      display: none;
     }
 }
 @media screen and (min-width: 992px) {
