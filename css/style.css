@@ -30,20 +30,20 @@ h2 {
     font-weight: bold;
     font-size: 24px;
     color: #999;
-    line-height: 29px;
+    line-height: 31px;
     padding: 10px;
 }
 h3 {
     font-style: italic;
     font-size: 20px;
     color: #000;
-    line-height: 22px;
+    line-height: 26px;
 }
 h4 {
     font-weight: bold;
-    font-size: 14px;
+    font-size: 16px;
     color: #4a4a4a;
-    line-height: 17px;
+    line-height: 23px;
 }
 h2,
 h3,
@@ -52,9 +52,9 @@ h5 {
     padding: 10px 5%;
 }
 p {
-    font-size: 14px;
+    font-size: 16px;
     color: #333;
-    line-height: 21px;
+    line-height: 24px;
 }
 a {
     color: #1199c3;
@@ -130,7 +130,6 @@ a.nav-link {
     color: #333;
     font-weight: 300;
     opacity: 1 !important;
-    padding-left: 0 !important;
     margin-bottom: 0;
 }
 .my-role {
@@ -138,7 +137,6 @@ a.nav-link {
     padding-top: 2px;
     color: #656565;
     padding-bottom: 2px;
-    padding-left: 0 !important;
 }
 .biopic {} .bio-location {
     margin-right: 2em;
@@ -186,7 +184,7 @@ a.nav-link {
     font-size: 26px;
 }
 .work-dates {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 28px;
 }
 #workExperience {
@@ -322,12 +320,12 @@ a.school-name {
     text-decoration: none !important;
 }
 .school-dates {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 28px;
     margin-left: 15px;
 }
 .school-degree {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 28px;
     margin-right: 15px;
 }
@@ -372,7 +370,7 @@ hr.online-edu-separator:last-child {
     margin-top: 2em;
 }
 .online-dates {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 28px;
 }
 .online-education-entry {

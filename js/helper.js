@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */
 var HTMLheaderName = '%data%';
 var HTMLheaderRole = '<strong>%data%</strong>';
 
@@ -27,7 +28,7 @@ var HTMLworkDescription = '<p class="work-description">%data%</p>';
 var HTMLprojectStart = '<div class="text-center col-sm-4 col-xs-12"><div class="panel panel-default project-entry"></div></div>';
 var HTMLprojectTitle = '<div class="panel-body project-title text-center">%data%</div>';
 var HTMLprojectDates = '<ul class="list-group text-center"><li class="list-group-item"><i class="fa fa-calendar-check-o"></i> %data%</li></ul>';
-var HTMLprojectDemo = '<div class="panel-footer"><a class="project-demo btn btn-lg btn-block btn-primary" href="http://%data%" target="_blank"<span class="fa fa-globe"></span> %data2%</a></div>'
+var HTMLprojectDemo = '<div class="panel-footer"><a class="project-demo btn btn-lg btn-block btn-primary" href="http://%data%" target="_blank"<span class="fa fa-globe"></span> %data2%</a></div>';
 var HTMLprojectDescription = '<p class="project-description">%data%</p>';
 var HTMLprojectImage = '<div class="panel-heading"><img class="proj-img img-responsive"  data-toggle="modal" data-target="#myModal%number%" src="%data%"></div>';
 var HTMLprojectImage2 = '<img class="proj-img2 img-responsive" src="%data%">';
@@ -48,44 +49,42 @@ var HTMLonlineURL = '<a href="#" class="online-profile" target="_blank"><span cl
 
 var googleMap = '<div id="map"></div>';
 
-var HTMLmodal = '<div class="modal fade" id="myModal%number%" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"> \
-  <div class="modal-dialog" role="document"> \
-    <div class="modal-content"> \
-      <div class="modal-header"> \
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button> \
-        <h4 class="modal-title" class="myModalLabel"></h4> \
-      </div> \
-      <div class="modal-body"> \
-      </div> \
-      <div class="modal-footer"> \
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> \
-      </div> \
-    </div> \
-  </div> \
-</div>'
+var HTMLmodal = `<div class="modal fade" id="myModal%number%" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" class="myModalLabel"></h4>
+      </div>
+      <div class="modal-body">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>`;
 
 $(document).ready(function() {
-  $('button').click(function() {
-    var $name = $('#name');
-    var iName = inName($name.text()) || function(){};
-    $name.html(iName);
-  });
+    $('button').click(function() {
+        var $name = $('#name');
+        var iName = inName($name.text()) || function() {};
+        $name.html(iName);
+    });
 });
 
 var clickLocations = [];
 
-function logClicks(x,y) {
-  clickLocations.push(
-    {
-      x: x,
-      y: y
-    }
-  );
-  console.log('x location: ' + x + '; y location: ' + y);
+function logClicks(x, y) {
+    clickLocations.push({
+        x: x,
+        y: y
+    });
+    console.log('x location: ' + x + '; y location: ' + y);
 }
 
 $(document).click(function(loc) {
-  // your code goes here!
+    // your code goes here!
 });
 
 
@@ -95,112 +94,112 @@ var map;
 
 function initializeMap() {
 
-  var locations;
+    var locations;
 
-  var mapOptions = {
-    disableDefaultUI: true
-  };
-
-  map = new google.maps.Map(document.querySelector('#map'), mapOptions);
-
-  function locationFinder() {
-    var locations = [];
-
-    locations.push(bio.contacts.location);
-
-    for(var i = 0; i < education.schools.length; i++) {
-      locations.push(education.schools[i].location);
+    var mapOptions = {
+        disableDefaultUI: true
     };
 
-    work.jobs.forEach(function(job){
-      locations.push(job.location);
-    });
+    map = new google.maps.Map(document.querySelector('#map'), mapOptions);
 
-    return locations;
-  }
+    function locationFinder() {
+        var locations = [];
 
+        locations.push(bio.contacts.location);
 
-  function createMapMarker(placeData) {
+        education.schools.forEach(function(schools) {
+            locations.push(schools.location);
+        });
 
-    var lat = placeData.geometry.location.lat();  // latitude from the place service
-    var lon = placeData.geometry.location.lng();  // longitude from the place service
-    var name = placeData.formatted_address;   // name of the place from the place service
-    var bounds = window.mapBounds;            // current boundaries of the map window
+        work.jobs.forEach(function(job) {
+            locations.push(job.location);
+        });
 
-    // marker is an object with additional data about the pin for a single location
-    var marker = new google.maps.Marker({
-      map: map,
-      position: placeData.geometry.location,
-      title: name
-    });
-
-    // infoWindows are the little helper windows that open when you click
-    // or hover over a pin on a map. They usually contain more information
-    // about a location.
-    var infoWindow = new google.maps.InfoWindow({
-      content: name
-    });
-
-
-    google.maps.event.addListener(marker, 'mouseover', function() {
-      infoWindow.open(map,marker)
-    });
-
-    google.maps.event.addListener(marker, 'mouseout', function() {
-        infoWindow.close(map,marker);
-    });
-
-    // this is where the pin actually gets added to the map.
-    // bounds.extend() takes in a map location object
-    bounds.extend(new google.maps.LatLng(lat, lon));
-    // fit the map to the new marker
-    map.fitBounds(bounds);
-    // center the map
-    map.setCenter(bounds.getCenter());
-  }
-
-  /*
-  callback(results, status) makes sure the search returned results for a location.
-  If so, it creates a new map marker for that location.
-  */
-  function callback(results, status) {
-    if (status == google.maps.places.PlacesServiceStatus.OK) {
-      createMapMarker(results[0]);
+        return locations;
     }
-  }
 
-  /*
-  pinPoster(locations) takes in the array of locations created by locationFinder()
-  and fires off Google place searches for each location
-  */
-  function pinPoster(locations) {
 
-    // creates a Google place search service object. PlacesService does the work of
-    // actually searching for location data.
-    var service = new google.maps.places.PlacesService(map);
+    function createMapMarker(placeData) {
 
-    // Iterates through the array of locations, creates a search object for each location
-      locations.forEach(function(place){
-      // the search request object
-      var request = {
-        query: place
-      };
+        var lat = placeData.geometry.location.lat(); // latitude from the place service
+        var lon = placeData.geometry.location.lng(); // longitude from the place service
+        var name = placeData.formatted_address; // name of the place from the place service
+        var bounds = window.mapBounds; // current boundaries of the map window
 
-      // Actually searches the Google Maps API for location data and runs the callback
-      // function with the search results after each search.
-      service.textSearch(request, callback);
-    });
-  }
+        // marker is an object with additional data about the pin for a single location
+        var marker = new google.maps.Marker({
+            map: map,
+            position: placeData.geometry.location,
+            title: name
+        });
 
-  // Sets the boundaries of the map based on pin locations
-  window.mapBounds = new google.maps.LatLngBounds();
+        // infoWindows are the little helper windows that open when you click
+        // or hover over a pin on a map. They usually contain more information
+        // about a location.
+        var infoWindow = new google.maps.InfoWindow({
+            content: name
+        });
 
-  // locations is an array of location strings returned from locationFinder()
-  locations = locationFinder();
 
-  // pinPoster(locations) creates pins on the map for each location in
-  // the locations array
-  pinPoster(locations);
+        google.maps.event.addListener(marker, 'mouseover', function() {
+            infoWindow.open(map, marker);
+        });
+
+        google.maps.event.addListener(marker, 'mouseout', function() {
+            infoWindow.close(map, marker);
+        });
+
+        // this is where the pin actually gets added to the map.
+        // bounds.extend() takes in a map location object
+        bounds.extend(new google.maps.LatLng(lat, lon));
+        // fit the map to the new marker
+        map.fitBounds(bounds);
+        // center the map
+        map.setCenter(bounds.getCenter());
+    }
+
+    /*
+    callback(results, status) makes sure the search returned results for a location.
+    If so, it creates a new map marker for that location.
+    */
+    function callback(results, status) {
+        if (status == google.maps.places.PlacesServiceStatus.OK) {
+            createMapMarker(results[0]);
+        }
+    }
+
+    /*
+    pinPoster(locations) takes in the array of locations created by locationFinder()
+    and fires off Google place searches for each location
+    */
+    function pinPoster(locations) {
+
+        // creates a Google place search service object. PlacesService does the work of
+        // actually searching for location data.
+        var service = new google.maps.places.PlacesService(map);
+
+        // Iterates through the array of locations, creates a search object for each location
+        locations.forEach(function(place) {
+            // the search request object
+            var request = {
+                query: place
+            };
+
+            // Actually searches the Google Maps API for location data and runs the callback
+            // function with the search results after each search.
+            service.textSearch(request, callback);
+        });
+    }
+
+    // Sets the boundaries of the map based on pin locations
+    window.mapBounds = new google.maps.LatLngBounds();
+
+    // locations is an array of location strings returned from locationFinder()
+    locations = locationFinder();
+
+    // pinPoster(locations) creates pins on the map for each location in
+    // the locations array
+    pinPoster(locations);
 
 }
 
@@ -214,6 +213,6 @@ window.addEventListener('load', initializeMap);
 // Vanilla JS way to listen for resizing of the window
 // and adjust map bounds
 window.addEventListener('resize', function(e) {
-  //Make sure the map bounds get updated on page resize
-map.fitBounds(mapBounds);
+    //Make sure the map bounds get updated on page resize
+    map.fitBounds(mapBounds);
 });
