@@ -4,4 +4,4 @@ Project - Online Resume
 
 FRONT END DEVELOPER Nanodegree 
 
-> [View Resume](http://webcreator.space/).
+> [View Resume](https://nedelcos.github.io/Project---Online-resume/).
