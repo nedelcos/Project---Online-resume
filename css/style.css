@@ -134,7 +134,7 @@ a.nav-link {
 }
 .my-role {
     margin: 0;
-    padding-top: 2px;
+    padding: 0;
     color: #656565;
     padding-bottom: 2px;
 }
