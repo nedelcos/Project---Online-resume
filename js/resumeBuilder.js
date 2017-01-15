@@ -13,7 +13,7 @@ var bio = {
         "github": "https://github.com/nedelcos",
         "location": "Berlin"
     },
-    "welcomeMessage": "I am Daniel & I love to build neat, responsive websites. If you are a company looking for a new Front End Developer and your HQ is in Berlin, then I might just be the man for the job.",
+    "welcomeMessage": "I am a Front-End Developer and I love to write –  clean – responsive & accessible websites. Until 2 years ago, I oscillated between marketing and graphic design. At one point, I started learning and loving to code. Now, I push myself every day to become a more evolved web developer, learn new technologies and strengthen my skills.",
     "skills": ["HTML5", "CSS3", "Bootstrap", "Javascript", "jQuery", "Git", "CMS", "Photoshop", "inDesign", "SEO & SEM"],
     "biopic": "images/me_cut.png",
     "logo": "images/logo.png",
@@ -58,19 +58,19 @@ var bio = {
 
 var work = {
     "jobs": [{
-        "employer": "Virtual X",
-        "title": "Web Developer Intern",
+        "employer": "nEAT Office",
+        "title": "Front End Developer",
         "location": "Bucharest",
-        "dates": "June 2016 - Present",
-        "description": "I was assigned the task of building a responsive website for a new department, dedicated for VR productions. I also did research & documentation on how the business works and created the content (copywriting) for the website."
+        "dates": "August 2016 - Present",
+        "description": "Part of a team of 2 members, responsible for building 2 responsive & interactive websites for the company. _workflow:  I implement the mock-ups provided by the the UI/UX Designer."
     }, {
         "employer": "Tegmark",
         "title": "System Administrator",
         "location": "Bucharest",
         "dates": "November 2015 - Present",
-        "description": "I was in charge of administering the company's websites, web applications and the VPS hosting."
+        "description": "I was in charge of administering the company's websites, web applications and the VPS hosting. I also Build online 360 virtual tours, for clients and host them on our server."
     }, {
-        "employer": "nEAT Office",
+        "employer": "Sectorul Meu",
         "title": "Web & Graphic designer",
         "location": "Bucharest",
         "dates": "May 2015 - November 2015",
